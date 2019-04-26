@@ -18,12 +18,14 @@ services:
       MYSQL_PASSWORD: 'asifimgonnatellyou'
       MYSQL_ROOT_PASSWORD: 'superamazingpasswordsaresuperamazing'
     ports:
-      - '3306:3306'
+      - '7043:3306'
     expose:
-      - '3306'
+      - '7043'
     volumes:
       - my-db:/var/lib/mariadb/coordinate.rocks/
-    network:
-      crnet
+    networks:
+      - crnet
 networks:
   crnet:
+volumes:
+  my-db:
