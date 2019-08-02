@@ -3,14 +3,6 @@ package MyApp::Model::Users;
 use strict;
 use warnings;
 
-use Mojo::Util 'secure_compare';
-
-my $USERS = {
-  joel      => 'las3rs',
-  marcus    => 'lulz',
-  sebastian => 'secr3t'
-};
-
 sub new { bless {}, shift }
 
 sub check {
